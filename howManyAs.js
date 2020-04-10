@@ -1,4 +1,3 @@
-// Complete the repeatedString function below.
 function repeatedString(s, n) {
  
   let aCount = 0;
@@ -13,14 +12,17 @@ function repeatedString(s, n) {
     aCount = aCount * multiplier;
     return aCount; 
 
+// even modulus is correct 
+
   } else if (n%(s.length) >= 1){
     
     let multiplier = (n/s.length); 
     let multiplierWholeNum = Math.trunc(multiplier);
+
     let remainder = n%(s.length);
     
     let remainderCount = 0;
-    for (let j=0; j <= remainder ; j++){
+    for (let j=0; j < remainder ; j++){
       if (s[j] === 'a'){
         remainderCount++;
       // remainder count 
@@ -38,10 +40,8 @@ function repeatedString(s, n) {
      return aCount;
   }
 }
-
-const subStr= "abbbbbc";
-repeatedString(subStr, 10);
-
+const subStr= "aa";
+repeatedString(subStr, 6);
 
 
 // solution number one 
